@@ -18,10 +18,10 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class LoginPreventionRequest(RpcRequest):
+class MessagePreventionRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Jaq', '2016-11-23', 'LoginPrevention')
+		RpcRequest.__init__(self, 'jaq', '2016-11-23', 'MessagePrevention')
 
 	def get_CallerName(self):
 		return self.get_query_params().get('CallerName')
@@ -149,17 +149,29 @@ class LoginPreventionRequest(RpcRequest):
 	def set_RegisterDate(self,RegisterDate):
 		self.add_query_param('RegisterDate',RegisterDate)
 
-	def get_AccountExist(self):
-		return self.get_query_params().get('AccountExist')
+	def get_LoginIp(self):
+		return self.get_query_params().get('LoginIp')
 
-	def set_AccountExist(self,AccountExist):
-		self.add_query_param('AccountExist',AccountExist)
+	def set_LoginIp(self,LoginIp):
+		self.add_query_param('LoginIp',LoginIp)
+
+	def get_LoginDate(self):
+		return self.get_query_params().get('LoginDate')
+
+	def set_LoginDate(self,LoginDate):
+		self.add_query_param('LoginDate',LoginDate)
 
 	def get_ExtendData(self):
 		return self.get_query_params().get('ExtendData')
 
 	def set_ExtendData(self,ExtendData):
 		self.add_query_param('ExtendData',ExtendData)
+
+	def get_PasswordHash(self):
+		return self.get_query_params().get('PasswordHash')
+
+	def set_PasswordHash(self,PasswordHash):
+		self.add_query_param('PasswordHash',PasswordHash)
 
 	def get_JsToken(self):
 		return self.get_query_params().get('JsToken')
@@ -172,21 +184,3 @@ class LoginPreventionRequest(RpcRequest):
 
 	def set_SDKToken(self,SDKToken):
 		self.add_query_param('SDKToken',SDKToken)
-
-	def get_PasswordHash(self):
-		return self.get_query_params().get('PasswordHash')
-
-	def set_PasswordHash(self,PasswordHash):
-		self.add_query_param('PasswordHash',PasswordHash)
-
-	def get_LoginType(self):
-		return self.get_query_params().get('LoginType')
-
-	def set_LoginType(self,LoginType):
-		self.add_query_param('LoginType',LoginType)
-
-	def get_PasswordCorrect(self):
-		return self.get_query_params().get('PasswordCorrect')
-
-	def set_PasswordCorrect(self,PasswordCorrect):
-		self.add_query_param('PasswordCorrect',PasswordCorrect)

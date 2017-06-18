@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class AfsCheckRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'jaq', '2016-11-23', 'AfsCheck')
+		RpcRequest.__init__(self, 'Jaq', '2016-11-23', 'AfsCheck')
 
 	def get_CallerName(self):
 		return self.get_query_params().get('CallerName')
